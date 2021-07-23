@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 //Main configuration variables
 const urlToCheck = `https://service2.diplo.de/rktermin/extern/choose_realmList.do?locationCode=newd&request_locale=en`;
 const elementsToSearchFor = ['continue',];
-const checkingFrequency = (1) * 60000; //first number represent the checkingFrequency in minutes
+const checkingFrequency = (5) * 60000; //first number represent the checkingFrequency in minutes
 const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 const slack = require('slack-notify')(SLACK_WEBHOOK_URL);
 const slackChannel = 'site-up'
@@ -60,11 +60,11 @@ const main = async function () {
         console.error('Error vising site...');
     }
 }
-main();
 
 
 
-// const intervalId = setInterval(main, checkingFrequency);
+
+const intervalId = setInterval(main, checkingFrequency);
 
 async function takeScreenshot(url = urlToCheck) {
     const browser = await puppeteer.launch({headless: true});
