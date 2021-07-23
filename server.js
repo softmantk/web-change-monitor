@@ -22,7 +22,6 @@ const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/T01AY5W7B37/B0298503
 const slack = require('slack-notify')(SLACK_WEBHOOK_URL);
 const slackChannel = 'site-up'
 const serverUrl = "http://localhost:3000"
-const web = new WebClient(SLACK_WEBHOOK_URL);
 
 const main = async function () {
     console.log("running...");
