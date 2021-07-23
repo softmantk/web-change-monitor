@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 5002;
 
 
 //Main configuration variables
-const urlToCheck = `https://service2.diplo.de/rktermin/extern/choose_realmList.do?locationCode=newd&request_locale=en`;
-// const urlToCheck = `https://service2.diplo.de/rktermin/extern/choose_realmList.do?locationCode=banga&request_locale=en`;
+// const urlToCheck = `https://service2.diplo.de/rktermin/extern/choose_realmList.do?locationCode=newd&request_locale=en`; // new delhi
+const urlToCheck = `https://service2.diplo.de/rktermin/extern/choose_realmList.do?locationCode=banga&request_locale=en`;
 const elementsToSearchFor = ['continue',];
 const checkingFrequency = 2 * (60) * 1000; //first number represent the checkingFrequency in minutes
 const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
