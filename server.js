@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5002;
 
 
 //Main configuration variables
