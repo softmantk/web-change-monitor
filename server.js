@@ -4,7 +4,6 @@ const axios = require("axios");
 const puppeteer = require('puppeteer');
 const uuid = require("uuid").v4;
 const path = require("path");
-const { WebClient } = require('@slack/web-api');
 
 //Express configuration
 const app = express();
